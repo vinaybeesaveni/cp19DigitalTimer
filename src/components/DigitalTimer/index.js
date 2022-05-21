@@ -67,13 +67,12 @@ class DigitalTimer extends Component {
 
   render() {
     const {timeLimit, isRunning, timeElapsedInSeconds} = this.state
-    const isTimerCompleted = timeLimit * 60 === timeElapsedInSeconds
+    const isTimerCompleted = timeElapsedInSeconds > 0
     const imgUrl = isRunning
       ? 'https://assets.ccbp.in/frontend/react-js/pause-icon-img.png'
       : 'https://assets.ccbp.in/frontend/react-js/play-icon-img.png'
     const altText = isRunning ? 'pause icon' : 'play icon'
     const timerStatus = isRunning ? 'Running' : 'Paused'
-    console.log('running')
     return (
       <div className="bg-container">
         <h1 className="heading">Digital Timer</h1>
@@ -86,29 +85,27 @@ class DigitalTimer extends Component {
           </div>
           <div className="details-container">
             <div className="start-stop-container">
-              <div className="stop-pause-container">
-                <button
-                  type="button"
-                  className="btn"
-                  onClick={this.toggleStopPause}
-                  disabled={isTimerCompleted}
-                >
-                  <img src={imgUrl} alt={altText} className="stop-pause-img" />
-                </button>
+              <button
+                type="button"
+                className="btn stop-pause-container"
+                onClick={this.toggleStopPause}
+              >
+                <img src={imgUrl} alt={altText} className="stop-pause-img" />
                 <p className="start">{isRunning ? 'Pause' : 'Start'}</p>
-              </div>
-              <div className="stop-pause-container">
-                <button type="button" className="btn">
-                  <img
-                    src="https://assets.ccbp.in/frontend/react-js/reset-icon-img.png"
-                    alt="reset icon"
-                    className="stop-pause-img"
-                    onClick={this.onReset}
-                    disabled={isTimerCompleted}
-                  />
-                </button>
+              </button>
+
+              <button
+                type="button"
+                className="btn stop-pause-container"
+                onClick={this.onReset}
+              >
+                <img
+                  src="https://assets.ccbp.in/frontend/react-js/reset-icon-img.png"
+                  alt="reset icon"
+                  className="stop-pause-img"
+                />
                 <p className="start">Reset</p>
-              </div>
+              </button>
             </div>
             <p className="set-timer-limit">Set Timer limit</p>
             <div className="set-timer-container">
@@ -116,6 +113,7 @@ class DigitalTimer extends Component {
                 type="button"
                 className="plus-minus-btn"
                 onClick={this.onDecrement}
+                disabled={isTimerCompleted}
               >
                 -
               </button>
@@ -124,6 +122,7 @@ class DigitalTimer extends Component {
                 type="button"
                 className="plus-minus-btn"
                 onClick={this.onIncrement}
+                disabled={isTimerCompleted}
               >
                 +
               </button>
