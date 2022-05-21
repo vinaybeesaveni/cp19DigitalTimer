@@ -1,0 +1,147 @@
+* {
+  font-family: 'Roboto';
+}
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(#defafe, #cffcf1);
+  height: 100vh;
+  width: 100%;
+  padding-top: 10%;
+}
+
+.heading {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .bg-container {
+    padding-top: 15%;
+  }
+  .heading {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bg-container {
+    padding-top: 5%;
+  }
+}
+.whole-container {
+  width: 100%;
+}
+.timer-img-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .timer-img-container {
+    width: 45%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .timer-img-container {
+    height: 65vh;
+  }
+}
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+}
+.timer {
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #00d9f5;
+}
+.paused {
+  margin-top: 0;
+  font-weight: bold;
+}
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.start-stop-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+.stop-pause-container {
+  display: flex;
+  align-items: center;
+}
+.stop-pause-img {
+  width: 25px;
+  height: 25px;
+}
+.btn {
+  background-color: transparent;
+  border-width: 0;
+}
+.start {
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+.set-timer-limit {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .set-timer-limit {
+    font-size: 20px;
+  }
+}
+
+.set-timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+.timer-limit {
+  background-image: linear-gradient(to right, #70e6c8, #00d9f5);
+  width: 80px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+.plus-minus-btn {
+  background-color: transparent;
+  border-width: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+.whole-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .whole-container {
+    width: 65%;
+  }
+}
+.details-container {
+  width: 45%;
+}
