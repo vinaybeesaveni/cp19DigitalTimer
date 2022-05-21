@@ -91,6 +91,7 @@
 .btn {
   background-color: transparent;
   border-width: 0;
+  cursor: pointer;
 }
 .start {
   font-size: 25px;
@@ -129,6 +130,7 @@
   border-width: 0;
   font-size: 30px;
   font-weight: bold;
+  cursor: pointer;
 }
 .whole-container {
   display: flex;
@@ -139,7 +141,7 @@
 }
 @media screen and (min-width: 992px) {
   .whole-container {
-    width: 65%;
+    width: 66%;
   }
 }
 .details-container {
